@@ -1,0 +1,77 @@
+$brand-color: #dedede;
+$brand-secondary-color: #b09044;
+$brand-background-color: black;
+$menu-color: #dedede;
+$menu-secondary-color: #979797;
+$menu-background-color: black;
+$border-color: #b09044;
+
+$border-width: 0.05rem;
+
+body {
+  --brand-color: #{$brand-color};
+  --brand-secondary-color: #{$brand-secondary-color};
+  --brand-background-color: #{$brand-background-color};
+  --menu-color: #{$menu-color};
+  --menu-secondary-color: #{$menu-secondary-color};
+  --menu-background-color: #{$menu-background-color};
+  --border-color: #{$border-color};
+  color: var(--brand-color);
+  background-color: var(--brand-background-color);
+}
+.menu-driver {
+  .menu {
+    color: var(--menu-color);
+    background-color: var(--menu-background-color);
+    border-color: black;
+    .name {
+      color: var(--brand-secondary-color);
+      text-align: left;
+      margin-bottom: - $border-width;
+      border-bottom: $border-width solid var(--border-color);
+    }
+    .section {
+      .name {
+        color: var(--brand-color);
+        border: unset;
+      }
+      .description {
+        color: var(--menu-secondary-color);
+      }
+    }
+    .section + .section {
+      padding-top: $base-line-height - $border-width;
+      border-top: $border-width solid var(--border-color);
+    }
+  }
+
+  .guide {
+    &, &:before, &:after {    
+      outline: 1px dashed white;
+    }
+  }
+
+  nav {
+    background-color: var(--brand-background-color);
+    border-color: var(--border-color);
+    border-bottom-width: $border-width;
+  
+    ul {
+      li {
+        a.current {
+          background-color: var(--border-color);
+        }
+        a, a:visited, a:hover, a:active {
+          color: inherit;
+        }
+      }
+    }
+  
+  }
+}
+nav {
+  border-style: solid;
+  border-top: $border-width;
+  padding-top: $base-line-height - ($border-width * 2);
+  border-bottom: $border-width solid var(--border-color);
+}
