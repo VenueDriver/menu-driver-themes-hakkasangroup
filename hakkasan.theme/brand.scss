@@ -47,7 +47,7 @@ body {
 
   .guide {
     &, &:before, &:after {    
-      outline: 1px dashed white;
+      outline: 3px dotted white;
     }
   }
 
@@ -55,11 +55,14 @@ body {
     background-color: var(--brand-background-color);
     border-color: var(--border-color);
     border-bottom-width: $border-width;
+    margin-bottom: 0;
   
     ul {
       li {
-        a.current {
-          background-color: var(--border-color);
+        a.current, a:visited.current {
+          color: var(--border-color);
+          background-color: unset;
+          border-bottom: $border-width solid var(--border-color);
         }
         a, a:visited, a:hover, a:active {
           color: inherit;
@@ -74,4 +77,34 @@ nav {
   border-top: $border-width;
   padding-top: $base-line-height - ($border-width * 2);
   border-bottom: $border-width solid var(--border-color);
+}
+
+.menu-driver {
+  padding-left: 0;
+  padding-right: 0;
+
+  nav {
+    padding-left: $base-line-height;
+    padding-right: $base-line-height;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu-driver {
+    padding-left: $base-line-height;
+    padding-right: $base-line-height;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .menu-driver {
+    nav {
+      margin-bottom: $base-line-height;
+    }
+    
+    .guide {
+      &, &:before, &:after {    
+        outline: 3px dotted #777;
+      }
+    }
+  }
 }
