@@ -1,4 +1,22 @@
 <header>
-  <img height="32" width="33" src="https://assets-2019.hakkasan.com/wp-content/uploads/2019/02/14172555/brand.png" alt="Hakkasan">
-  <div>Mayfair, London</div>
+  <a href="https://hakkasan.com/mayfair/" class="logo"><img height="28" width="28" src="https://assets-2019.hakkasan.com/wp-content/uploads/2019/02/14172555/brand.png" alt="Hakkasan"></a>
+  <div class="location">Mayfair, London</div>
+  <div class="hamburger">
+    <a id="hamburger-button" href="javascript:void(0);" title="Main Menu" class="toggle">
+      <span></span><span></span><span></span>
+    </a>
+  </div>
 </header>
+
+<script>
+  document.getElementById('hamburger-button').onclick = function() {
+    var hamburgerMenu = document.getElementById('hamburger-menu')
+    var className = ' ' + hamburgerMenu.className + ' ';
+    hamburgerMenu.className = ~className.indexOf(' active ') ?
+                         className.replace(' active ', ' ') :
+                         hamburgerMenu.className + ' active';
+}
+  window.addEventListener("scroll", event => {
+    document.getElementById('hamburger-menu').className = "";
+  });
+</script>
