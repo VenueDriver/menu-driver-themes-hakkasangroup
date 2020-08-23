@@ -54,7 +54,7 @@ body {
   .menu {
     color: var(--menu-color);
     background-color: var(--menu-background-color);
-    border-color: black;
+    border-color: $brand-background-color;
     .name {
       color: var(--brand-secondary-color);
       text-align: left;
@@ -73,6 +73,13 @@ body {
     .section + .section {
       padding-top: $base-line-height - $border-width;
       border-top: $border-width solid var(--border-color);
+    }
+  }
+  .menu.rtl {
+    text-align: right;
+
+    .name {
+      text-align: right;
     }
   }
 
@@ -99,15 +106,40 @@ body {
           color: inherit;
         }
       }
+      // The category navigation puts the 'current' class on the <li> instead of the
+      // <a> within it.  TODO: Make that more consistent and DRY these styles.
+      li.current {
+        a, a:visited {
+          color: var(--border-color);
+          background-color: unset;
+          border-bottom: $border-width solid var(--border-color);
+        }
+      }
     }
   
   }
-}
-nav {
-  border-style: solid;
-  border-top: $border-width;
-  padding-top: $base-line-height - ($border-width * 2);
-  border-bottom: $border-width solid var(--border-color);
+  
+  .menu {
+    a.anchor {
+      display: block;
+      position: relative;
+      top: - ($base-line-height * 5);
+    }
+  }
+
+  nav.menu-nav, nav.category-nav {
+    border-style: solid;
+    border-top: $border-width;
+    padding-top: $base-line-height - ($border-width * 2);
+    border-bottom-color: var(--border-color);
+    border-bottom-width: $border-width;
+    border-bottom-style: solid;
+  }
+  nav.category-nav {
+    padding-bottom: $base-line-height;
+    margin-bottom: 0;
+  }
+
 }
 
 .menu-driver {
@@ -144,10 +176,10 @@ nav {
     }
   }
 
-  nav {
-    padding-left: $base-line-height;
-    padding-right: $base-line-height;
-  }
+  // nav {
+  //   padding-left: $base-line-height;
+  //   padding-right: $base-line-height;
+  // }
 }
 @media only screen and (min-width: 768px) {
   .menu-driver {
@@ -157,7 +189,18 @@ nav {
       nav {
         min-width: 12rem;
       }
+      nav.menu-nav {
+        border: 0;
+      }
     }
+    .menu {
+      a.anchor {
+        display: block;
+        position: relative;
+        top: - ($base-line-height * 2);
+      }
+    }
+
   }
 }
 
@@ -177,5 +220,12 @@ nav {
         outline: 3px dotted #777;
       }
     }
+  }
+}
+
+
+@media print {
+  nav {
+    display: none;
   }
 }
