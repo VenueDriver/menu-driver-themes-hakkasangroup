@@ -16,6 +16,7 @@ body {
   --menu-secondary-color: #{$menu-secondary-color};
   --menu-background-color: #{$menu-background-color};
   --border-color: #{$border-color};
+  --border-widtn: #{$border-width};
   color: var(--brand-color);
   background-color: var(--brand-background-color);
 }
@@ -134,15 +135,14 @@ body {
     border-bottom-color: var(--border-color);
     border-bottom-width: $border-width;
     border-bottom-style: solid;
+    margin-left: unset;
+    margin-right: unset;
   }
   nav.category-nav {
     padding-bottom: $base-line-height;
     margin-bottom: 0;
   }
 
-}
-
-.menu-driver {
   padding-left: 0;
   padding-right: 0;
 
@@ -176,10 +176,9 @@ body {
     }
   }
 
-  // nav {
-  //   padding-left: $base-line-height;
-  //   padding-right: $base-line-height;
-  // }
+  #cookie-notice {
+    border-top-width: $border-width;
+  }
 }
 @media only screen and (min-width: 768px) {
   .menu-driver {
