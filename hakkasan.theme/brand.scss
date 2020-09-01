@@ -21,7 +21,7 @@ body {
   background-color: var(--brand-background-color);
 }
 .menu-driver {
-  
+
   header {
     @extend %sans-serif-font;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ body {
       }
     }
   }
-  
+
   .menu {
     color: var(--menu-color);
     background-color: var(--menu-background-color);
@@ -85,7 +85,7 @@ body {
   }
 
   .guide {
-    &, &:before, &:after {    
+    &, &:before, &:after {
       outline: 3px dotted white;
     }
   }
@@ -95,7 +95,7 @@ body {
     border-color: var(--border-color);
     border-bottom-width: $border-width;
     margin-bottom: 0;
-  
+
     ul {
       li {
         a.current, a:visited.current {
@@ -116,10 +116,14 @@ body {
           border-bottom: $border-width solid var(--border-color);
         }
       }
+      // Skip the underline for the category name if it's a single-category menu.
+      li.current:only-child a, a:visited {
+        border-bottom: 0;
+      }
     }
-  
+
   }
-  
+
   .menu {
     a.anchor {
       display: block;
@@ -213,9 +217,9 @@ body {
     nav {
       margin-bottom: $base-line-height;
     }
-    
+
     .guide {
-      &, &:before, &:after {    
+      &, &:before, &:after {
         outline: 3px dotted #777;
       }
     }
