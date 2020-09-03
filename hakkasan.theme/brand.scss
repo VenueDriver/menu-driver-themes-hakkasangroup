@@ -181,7 +181,11 @@ body {
   }
 
   #cookie-notice {
+    color: var(--menu-secondary-color);
     border-top-width: $border-width;
+    a, a:visited {
+      background-color: var(--menu-secondary-color);
+    }
   }
 }
 @media only screen and (min-width: 768px) {
@@ -223,12 +227,5 @@ body {
         outline: 3px dotted #777;
       }
     }
-  }
-}
-
-
-@media print {
-  nav {
-    display: none;
   }
 }
