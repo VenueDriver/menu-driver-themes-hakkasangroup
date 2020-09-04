@@ -1,10 +1,10 @@
-$brand-color: black;
-$brand-secondary-color: #455561;
-$brand-background-color: #f1f0ee;
-$menu-color: black;
-$menu-secondary-color: #666666;
-$menu-background-color: #f1f0ee;
-$border-color: #455561;
+$brand-color: white;
+$brand-secondary-color: #CCC;
+$brand-background-color: #26444f;
+$menu-color: white;
+$menu-secondary-color: #CCC;
+$menu-background-color: #26444f;
+$border-color: white;
 
 $border-width: 0.05rem;
 
@@ -43,7 +43,7 @@ body {
       margin-right: $base-line-height;
       width: $base-line-height;
       .toggle span {
-          background: black;
+          background: white;
           display: block;
           margin: 5px 0;
           height: 2px;
@@ -219,12 +219,5 @@ body {
         outline: 3px dotted #777;
       }
     }
-  }
-}
-
-
-@media print {
-  nav {
-    display: none;
   }
 }
