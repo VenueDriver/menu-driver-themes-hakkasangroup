@@ -1,6 +1,7 @@
 $brand-color: #dedede;
 $brand-secondary-color: #b09044;
 $brand-background-color: black;
+$brand-background-alternate-color: #222;
 $menu-color: #dedede;
 $menu-secondary-color: #979797;
 $menu-background-color: black;
@@ -12,6 +13,7 @@ body {
   --brand-color: #{$brand-color};
   --brand-secondary-color: #{$brand-secondary-color};
   --brand-background-color: #{$brand-background-color};
+  --brand-background-alternate-color: #{$brand-background-alternate-color};
   --menu-color: #{$menu-color};
   --menu-secondary-color: #{$menu-secondary-color};
   --menu-background-color: #{$menu-background-color};
@@ -90,9 +92,9 @@ body {
     }
   }
 
-  nav {
-    background-color: var(--brand-background-color);
-    border-color: var(--border-color);
+  nav.category-nav, nav.menu-nav {
+    background-color: var(--brand-background-alternate-color);
+    border-bottom-color: var(--brand-background-color);
     border-bottom-width: $border-width;
     margin-bottom: 0;
 
@@ -136,7 +138,7 @@ body {
     border-style: solid;
     border-top: $border-width;
     padding-top: $base-line-height - ($border-width * 2);
-    border-bottom-color: var(--border-color);
+    border-bottom-color: var(--brand-background-color);
     border-bottom-width: $border-width;
     border-bottom-style: solid;
     margin-left: unset;
