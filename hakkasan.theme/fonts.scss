@@ -36,7 +36,6 @@ src:url("https://use.typekit.net/af/d82207/000000000000000000017879/27/l?primer=
 font-display:swap;font-style:normal;font-weight:300;
 }
 
-
 %serif-font {
   font-family: 'Rotis', serif;
   font-weight: 300;
@@ -53,7 +52,7 @@ font-display:swap;font-style:normal;font-weight:300;
     @extend %serif-font;
   }
   .menu {
-    .section > .name {
+    .section > .meta > .name {
       @extend %serif-font;
     }
     .section {
