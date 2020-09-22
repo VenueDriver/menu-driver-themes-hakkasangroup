@@ -71,7 +71,7 @@
     @extend %serif-font;
   }
   .menu {
-    .section > .name {
+    .section > .meta > .name {
       @extend %serif-font;
     }
     .section {
