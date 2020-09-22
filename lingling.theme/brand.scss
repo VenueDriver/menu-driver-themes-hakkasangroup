@@ -1,0 +1,107 @@
+/* ultra-bright */
+/*
+$brand-color: white;
+$brand-background-color: #ff54ad;
+$menu-color: white;
+$menu-background-color: #d219c0;
+$border-color: #ff54ad;
+$border-width: 0;
+$nav-current-background-color: #ff54ad;
+*/
+
+/* gray / pink */
+$brand-color: white;
+$brand-background-color: #ff54ad;
+$menu-color: white;
+$menu-background-color: #7A7A7A;
+$border-color: #ff54ad;
+$border-width: 0;
+$nav-current-background-color: #ff54ad;
+
+body {
+  --brand-color: #{$brand-color};
+  --brand-background-color: #{$brand-background-color};
+  --menu-color: #{$menu-color};
+  --menu-background-color: #{$menu-background-color};
+  --border-color: #{$border-color};
+  --border-width: #{$border-width};
+  --nav-current-background-color: #{$nav-current-background-color};
+  color: var(--brand-color);
+  background-color: var(--brand-background-color);
+}
+.menu-driver {
+  header {
+    margin-bottom: 0;
+  }
+  .menu {
+    color: var(--menu-color);
+    background-color: var(--menu-background-color);
+    border-color: var(--menu-background-color);
+  }
+
+  nav {
+    background-color: var(--brand-background-color);
+    border-color: var(--brand-background-color);
+    padding-bottom: $base-line-height - $border-width;
+
+    ul {
+      li {
+        a {
+          padding: 0.20rem;
+        }
+      }
+      li {
+        a.current {
+          background-color: var(--nav-current-background-color);
+        }
+        a, a:visited, a:hover, a:active {
+          color: inherit;
+        }
+      }
+      // The category navigation puts the 'current' class on the <li> instead of the
+      // <a> within it.  TODO: Make that more consistent and DRY these styles.
+      li.current {
+        a, a:visited {
+          background-color: var(--nav-current-background-color);
+        }
+      }
+    }
+  }
+
+  nav.category-nav {
+    margin-bottom: 0;
+    background-color: var(--menu-background-color);
+  }
+  nav.menu-nav {
+    background-color: var(--menu-background-color);
+    margin-bottom: $base-line-height;
+  }
+
+  #category-nav-thumb {
+    margin-left: -$base-line-height;
+    margin-right: -$base-line-height;
+    background-color: var(--menu-background-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  nav, #category-nav-thumb {
+    .scroll-thumb {
+      svg {
+        fill: var(--brand-color);
+      }
+    }
+  }
+  nav.category-nav {
+    z-index: 3;
+  }
+  nav.menu-nav {
+    top: $base-line-height;
+  }
+
+  #cookie-notice {
+    background-color: var(--menu-background-color);
+  }
+}
