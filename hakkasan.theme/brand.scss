@@ -186,11 +186,11 @@ body {
   }
 
   .menu {
-    // a.anchor {
-    //   display: block;
-    //   position: relative;
-    //   top: - ($base-line-height * 6);
-    // }
+    a.anchor {
+      display: block;
+      position: relative;
+      top: - ($base-line-height * 6);
+    }
   }
 
   nav.menu-nav, nav.category-nav {
