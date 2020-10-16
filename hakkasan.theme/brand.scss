@@ -28,6 +28,7 @@ body {
 
   header {
     @extend %sans-serif-font;
+    letter-spacing: $base-line-height * 0.03571428571; // 1px at 1:1 == height * 1/28
     text-transform: uppercase;
     margin-bottom: 0;
     .logo {
@@ -180,7 +181,7 @@ body {
   nav.menu-nav {
     top: $base-line-height;
     padding-bottom: $base-line-height;
-    box-shadow: 2px 0px 20px 1px var(--border-dark-color);
+    box-shadow: 0px 6px 20px -6px var(--border-dark-color);
   }
   .menus {
     margin-top: -$base-line-height;
@@ -271,6 +272,7 @@ body {
       padding: 0;
       margin: 0;
       text-align: right;
+      white-space: nowrap;
     }
     li {
       font-weight: 600;
@@ -282,7 +284,10 @@ body {
         margin-top: -1rem;
       }
       a.btn-reservations {
-        padding-bottom: 0;
+        padding-top: 14px;
+        padding-bottom: 13px;
+        padding-left: 9px;
+        padding-right: 9px;
       }
     }
   }
@@ -350,15 +355,42 @@ body {
     header {
       position: sticky;
       top: 0;
-      padding-top: $base-line-height;
+      padding-top: $base-line-height * 0.892857; // 25px at 1:1 == height * 33/28
       z-index: 5;
       .location {
-        padding-left: 0;
+        div {
+          margin-top: $base-line-height * 0.25; // 7px at 1:1 == height * 7/28
+          padding-left: 0;
+        }
+      }
+      .logo {
+        margin-top: $base-line-height * 0.03571428571; // 1px
+        padding-right: $base-line-height * 1.1071428571; // 31px at 1:1 == height * 31/28
+        img {
+          width: $base-line-height * 1.17857; // 33px at 1:1 == height * 33/28
+        }
+      }
+      ul.menu {
+        margin-top: $base-line-height * 0.25; // 7px at 1:1 == height * 7/28
+        padding-right: $base-line-height * 0.1071429; // 3px at 1:1 == height * 3/28
+        li {
+          padding-left: $base-line-height * 0.7142857143; // 20px at 1:1 == height * 20/28
+          a.current, a:visited.current {
+            color: var(--border-color);
+          }
+        }
+        li.reservations {
+          margin-top: -$base-line-height * 0.03571428571; // 1px
+        }
       }
     }
 
-    padding-left: $base-line-height;
-    padding-right: $base-line-height;
+    // padding-left: $base-line-height;
+    // padding-right: $base-line-height;
+    // Super-precise integration with the main site's desktop layout.
+    padding-left: $base-line-height * 1.321429; // 37 pixels at 1:1 == height * 37/28
+    padding-right: $base-line-height * 1.321429;
+
     .menu-content {
       nav {
         min-width: 12rem;
@@ -367,7 +399,6 @@ body {
       nav.menu-nav {
         border: 0;
         box-shadow: none;
-        margin-top: -1.4rem;
       }
       nav.category-nav, nav.menu-nav {
         background-color: var(--brand-background-color);
@@ -383,6 +414,23 @@ body {
     }
     .legend {
       display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  .menu-driver {
+    header {
+      ul.menu.av-main-nav {
+        font-size: 13px;
+        li {
+          padding-left: 26px;
+          a.btn-reservations {
+            padding-left: 19px;
+            padding-right: 19px;
+          }
+        }
+      }
     }
   }
 }

@@ -1,11 +1,19 @@
 <div id="hamburger-menu">
   <ul>
     <li><a href="">Menu</a></li>
+
     <li><a href="https://hakkasan.com/mayfair/delivery-takeaway/">Delivery</a></li>
     <li><a href="https://gifts-uk.hakkasangroup.com/">Gifts</a></li>
-    <li><a href="https://hakkasan.com/mayfair/private-events/">Events</a></li>
-    <li><a href="https://hakkasan.com/mayfair/gallery/">Gallery</a></li>
-    <li><a href="https://hakkasan.com/mayfair/contact/">Contact</a></li>
-    <li><a href="https://hakkasan.com/story/mayfair/">Stories</a></li>
+    <% if data.location_name =~ /mayfair/i %>
+      <li><a href="https://hakkasan.com/mayfair/private-events/">Events</a></li>
+      <li><a href="https://hakkasan.com/mayfair/gallery/">Gallery</a></li>
+      <li><a href="https://hakkasan.com/mayfair/contact/">Contact</a></li>
+      <li><a href="https://hakkasan.com/story/mayfair/">Stories</a></li>
+    <% else %>
+    <li><a href="https://hakkasan.com/hanway-place/private-events/">Events</a></li>
+    <li><a href="https://hakkasan.com/hanway-place/gallery/">Gallery</a></li>
+    <li><a href="https://hakkasan.com/hanway-place/contact/">Contact</a></li>
+    <li><a href="https://hakkasan.com/story/hanway-place/">Stories</a></li>
+    <% end %>
   </ul>
 </div>

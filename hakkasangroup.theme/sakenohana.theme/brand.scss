@@ -42,6 +42,8 @@ body {
     .hamburger {
       margin-right: $base-line-height;
       width: $base-line-height;
+      padding-top: 8px;
+      margin-left: 1.4rem;
       .toggle span {
           background: white;
           display: block;
@@ -187,6 +189,11 @@ body {
   .menu-driver {
     padding-left: $base-line-height;
     padding-right: $base-line-height;
+    header {
+      .hamburger {
+        margin-left: 0;
+      }
+    }
     .menu-content {
       nav {
         min-width: 12rem;

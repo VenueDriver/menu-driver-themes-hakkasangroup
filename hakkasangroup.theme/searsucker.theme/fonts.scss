@@ -1,0 +1,82 @@
+@font-face {
+     font-family: 'olivettitypewriter';
+     src:    url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-bold.eot') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-bold.eot?#iefix') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-bold.ttf') format('truetype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-bold.woff') format('woff'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-bold.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 700;
+     font-display: auto;
+}
+@font-face {
+     font-family: 'olivettitypewriter';
+     src:    url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-regular.eot') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-regular.eot?#iefix') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-regular.ttf') format('truetype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-regular.woff') format('woff'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/olivettitypewriter/olivettitypewriter-regular.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 400;
+     font-display: auto;
+}
+@font-face {
+     font-family: 'universltstd';
+     src:    url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-bold.eot') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-bold.eot?#iefix') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-bold.ttf') format('truetype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-bold.woff') format('woff'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-bold.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 700;
+     font-display: auto;
+}
+@font-face {
+     font-family: 'universltstd';
+     src:    url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-regular.eot') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-regular.eot?#iefix') format('embedded-opentype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-regular.ttf') format('truetype'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-regular.woff') format('woff'),
+             url('https://assets-2019.hakkasangroup.com/wp-content/uploads/sites/2/avia_fonts/type_fonts/universltstd/universltstd-regular.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 400;
+     font-display: auto;
+}
+
+
+%serif-font {
+  font-family: 'olivettitypewriter', serif;
+  font-weight: 300;
+}
+%sans-serif-font {
+  font-family: 'universltstd', sans-serif;
+  font-weight: 400;
+}
+
+.menu-driver {
+  @extend %sans-serif-font;
+
+  .menu > .name {
+    @extend %serif-font;
+  }
+  .menu {
+    .section > .meta > .name {
+      @extend %serif-font;
+    }
+    .section {
+      .item {
+        .name {
+          @extend %serif-font;
+        }
+        .description {
+          @extend %sans-serif-font;
+        }
+      }
+    }
+  }
+
+}
+
+nav {
+  @extend %serif-font;
+}
