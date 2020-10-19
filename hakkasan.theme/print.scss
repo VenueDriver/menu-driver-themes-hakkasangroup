@@ -10,6 +10,22 @@
     font-size: 80%;
   }
   .menu-driver {
+    header {
+      color: black;
+      background-color: white;
+      text-align: center;
+      flex-direction: column;
+      margin-bottom: $base-line-height;
+      .logo {
+        margin: 0;
+      }
+      .location {
+        color: black;
+      }
+      .hamburger, ul {
+        display: none;
+      }
+    }
     #hamburger-menu, #category-nav-thumb {
       display: none;
     }
@@ -25,8 +41,17 @@
           margin-bottom: 0;
         }
       }
+      .category {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .category:first-child {
+        margin-bottom: $base-line-height;
+      }
+      .category:not(:first-child) {
+        page-break-before: always;
+      }
       .menu, .category {
-        page-break-after: always;
         border: 0;
         margin-top: 0;
         .section + .section {
