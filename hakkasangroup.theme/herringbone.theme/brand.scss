@@ -54,6 +54,12 @@ body {
     }
   }
 
+  .scroll-thumb {
+    svg {
+      fill: white;
+    }
+  }
+
   .menu {
     color: var(--menu-color);
     background-color: var(--menu-background-color);
@@ -133,7 +139,6 @@ body {
   nav.menu-nav, nav.category-nav {
     border-style: solid;
     border-top: $border-width;
-    padding-top: $base-line-height - ($border-width * 2);
     border-bottom-color: var(--border-color);
     border-bottom-width: $border-width;
     border-bottom-style: solid;
@@ -141,7 +146,6 @@ body {
     margin-right: unset;
   }
   nav.category-nav {
-    padding-bottom: $base-line-height;
     margin-bottom: 0;
   }
 

@@ -74,15 +74,11 @@
     .section > .meta > .name {
       @extend %serif-font;
     }
-    .section {
-      .item {
-        .name {
-          @extend %serif-font;
-        }
-        .description {
-          @extend %sans-serif-font;
-        }
-      }
+    .section > .item > .name {
+      @extend %serif-font;
+    }
+    .section > .item > .description {
+      @extend %sans-serif-font;
     }
   }
 
