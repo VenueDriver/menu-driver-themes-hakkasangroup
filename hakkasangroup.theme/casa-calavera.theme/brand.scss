@@ -1,10 +1,10 @@
-$brand-color: black;
-$brand-secondary-color: #383330;
-$brand-background-color: #DDDCD0;
-$menu-color: black;
-$menu-secondary-color: #383330;
-$menu-background-color: #DDDCD0;
-$border-color: #DDDCD0;
+$brand-color: #DDDCD0;
+$brand-secondary-color: #DDDCD0;
+$brand-background-color: #383330;
+$menu-color: #DDDCD0;
+$menu-secondary-color: #DDDCD0;
+$menu-background-color: #383330;
+$border-color: #383330;
 
 $border-width: 0.05rem;
 
@@ -53,7 +53,7 @@ body {
       padding-top: 8px;
       margin-left: 1.4rem;
       .toggle span {
-          background: black;
+          background: var(--brand-color);
           display: block;
           margin: 5px 0;
           height: 2px;
@@ -109,7 +109,7 @@ body {
     ul {
       li {
         a.current, a:visited.current {
-          color: var(--border-color);
+          color: var(--old-sol);
           background-color: unset;
           border-bottom: $border-width solid var(--border-color);
         }
@@ -187,7 +187,19 @@ body {
   }
 
   #cookie-notice {
+    color: var(--brand-background-color);
+    background-color: var(--brand-secondary-color);
+    border-color: var(--brand-background-color);
     border-top-width: $border-width;
+    .button {
+      color: var(--brand-secondary-color);
+      background-color: var(--brand-background-color);
+      border-color: var(--brand-secondary-color);
+      a, a:visited {
+        color: var(--brand-secondary-color);
+        background-color: var(--brand-background-color);
+      }
+    }
   }
 }
 @media only screen and (min-width: 768px) {
@@ -243,3 +255,6 @@ body {
     display: none;
   }
 }
+
+
+@import 'light-mode';
