@@ -72,9 +72,6 @@ body {
       margin-bottom: - $border-width;
       border-bottom: $border-width solid var(--border-color);
     }
-    .description {
-      color: var(--menu-secondary-color);
-    }
     .section {
       .name {
         color: var(--brand-color);
@@ -106,6 +103,10 @@ body {
     border-bottom-width: $border-width;
     margin-bottom: 0;
 
+    .scroll-thumb svg {
+      fill: var(--old-sol);
+    }
+
     ul {
       li {
         a.current, a:visited.current {
@@ -128,6 +129,9 @@ body {
       }
     }
 
+    .legend {
+      display: none;
+    }
   }
 
   .menu {
@@ -141,13 +145,16 @@ body {
   nav.menu-nav, nav.category-nav {
     border-style: solid;
     border-top: $border-width;
-    border-bottom-color: var(--border-color);
+    border-bottom-color: var(--brand-color);
     border-bottom-width: $border-width;
     border-bottom-style: solid;
     margin-left: unset;
     margin-right: unset;
   }
   nav.category-nav {
+    margin-bottom: 0;
+  }
+  nav.menu-nav {
     margin-bottom: 0;
   }
 
@@ -214,6 +221,9 @@ body {
     .menu-content {
       nav {
         min-width: 12rem;
+        .legend {
+          display: block;
+        }
       }
       nav.menu-nav {
         border: 0;

@@ -1,8 +1,8 @@
 /* Anything that will be toggled for dark mode needs its own name. */
-$brand-color-light: black;
+$brand-color-light: #383330;
 $brand-secondary-color-light: #383330;
 $brand-background-color-light: #DDDCD0;
-$menu-color-light: black;
+$menu-color-light: #383330;
 $menu-secondary-color-light: #383330;
 $menu-background-color-light: #DDDCD0;
 $border-color-light: #DDDCD0;
@@ -22,9 +22,21 @@ $border-color-light: #DDDCD0;
   }
 
   .menu-driver {
+    header {
+      .hamburger {
+        .toggle span {
+            background: var(--brand-color-light);
+        }
+      }
+    }
+
     nav {
       color: var(--menu-color-light);
       background-color: var(--menu-background-color-light);
+    }
+
+    nav.menu-nav, nav.category-nav {
+      border-bottom-color: var(--brand-color--light);
     }
 
     .menu {

@@ -42,31 +42,3 @@
   font-family: 'basiersquaremono', sans-serif;
   font-weight: 400;
 }
-
-.menu-driver {
-  @extend %sans-serif-font;
-
-  .menu > .name {
-    @extend %serif-font;
-  }
-  .menu {
-    .section > .meta > .name {
-      @extend %serif-font;
-    }
-    .section {
-      .item {
-        .name {
-          @extend %serif-font;
-        }
-        .description {
-          @extend %sans-serif-font;
-        }
-      }
-    }
-  }
-
-}
-
-nav {
-  @extend %serif-font;
-}
