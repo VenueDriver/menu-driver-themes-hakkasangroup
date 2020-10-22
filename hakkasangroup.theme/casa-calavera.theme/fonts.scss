@@ -1,0 +1,72 @@
+
+@font-face {
+     font-family: 'basiersquaremono';
+     src:    url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-bold.eot') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-bold.eot?#iefix') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-bold.ttf') format('truetype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-bold.woff') format('woff'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-bold.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 700;
+     font-display: swap;
+}
+@font-face {
+     font-family: 'basiersquaremono';
+     src:    url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-regular.eot') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-regular.eot?#iefix') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-regular.ttf') format('truetype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-regular.woff') format('woff'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/basiersquaremono/basiersquaremono-regular.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 400;
+     font-display: swap;
+}
+@font-face {
+     font-family: 'local-gothic';
+     src:    url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/local-gothic/localgothic-regular.eot') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/local-gothic/localgothic-regular.eot?#iefix') format('embedded-opentype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/local-gothic/localgothic-regular.ttf') format('truetype'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/local-gothic/localgothic-regular.woff') format('woff'),
+             url('https://hakkasangroup.com/casacalavera/wp-content/uploads/sites/3/avia_fonts/type_fonts/local-gothic/localgothic-regular.woff2') format('woff2');
+     font-style:  normal;
+     font-weight: 400;
+     font-display: swap;
+}
+
+
+%serif-font {
+  font-family: 'local-gothic', serif;
+  font-weight: 300;
+}
+%sans-serif-font {
+  font-family: 'basiersquaremono', sans-serif;
+  font-weight: 400;
+}
+
+.menu-driver {
+  @extend %sans-serif-font;
+
+  .menu > .name {
+    @extend %serif-font;
+  }
+  .menu {
+    .section > .meta > .name {
+      @extend %serif-font;
+    }
+    .section {
+      .item {
+        .name {
+          @extend %serif-font;
+        }
+        .description {
+          @extend %sans-serif-font;
+        }
+      }
+    }
+  }
+
+}
+
+nav {
+  @extend %serif-font;
+}

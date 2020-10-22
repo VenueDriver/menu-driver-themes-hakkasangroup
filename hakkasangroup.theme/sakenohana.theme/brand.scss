@@ -45,7 +45,7 @@ body {
       padding-top: 8px;
       margin-left: 1.4rem;
       .toggle span {
-          background: white;
+          background: black;
           display: block;
           margin: 5px 0;
           height: 2px;
@@ -133,7 +133,6 @@ body {
   nav.menu-nav, nav.category-nav {
     border-style: solid;
     border-top: $border-width;
-    padding-top: $base-line-height - ($border-width * 2);
     border-bottom-color: var(--border-color);
     border-bottom-width: $border-width;
     border-bottom-style: solid;
@@ -141,7 +140,6 @@ body {
     margin-right: unset;
   }
   nav.category-nav {
-    padding-bottom: $base-line-height;
     margin-bottom: 0;
   }
 
@@ -150,6 +148,7 @@ body {
 
   .menu-content {
     #hamburger-menu {
+      pointer-events: none;
       @extend %serif-font;
       position: absolute;
       top: 0px;
@@ -173,6 +172,7 @@ body {
       }
     }
     #hamburger-menu.active {
+      pointer-events: auto;
       opacity: 1;
       pointer-events: auto;
     }
@@ -180,9 +180,6 @@ body {
 
   #cookie-notice {
     border-top-width: $border-width;
-    a#cookie-notice-button {
-      background-color: $border-color;
-    }
   }
 }
 @media only screen and (min-width: 768px) {
@@ -229,5 +226,12 @@ body {
         outline: 3px dotted #777;
       }
     }
+  }
+}
+
+
+@media print {
+  nav {
+    display: none;
   }
 }

@@ -1,10 +1,10 @@
-$brand-color: white;
-$brand-secondary-color: #CCC;
-$brand-background-color: #26444f;
-$menu-color: white;
-$menu-secondary-color: #CCC;
-$menu-background-color: #26444f;
-$border-color: white;
+$brand-color: black;
+$brand-secondary-color: #383330;
+$brand-background-color: #DDDCD0;
+$menu-color: black;
+$menu-secondary-color: #383330;
+$menu-background-color: #DDDCD0;
+$border-color: #DDDCD0;
 
 $border-width: 0.05rem;
 
@@ -17,6 +17,7 @@ body {
   --menu-background-color: #{$menu-background-color};
   --border-color: #{$border-color};
   --border-widtn: #{$border-width};
+  --old-sol: #CD5443;
   color: var(--brand-color);
   background-color: var(--brand-background-color);
 }
@@ -38,6 +39,13 @@ body {
     }
     .location {
       flex: 1;
+      svg {
+        height: $base-line-height * 2;
+        margin-top: -.8rem;
+        .cls-1 {
+          fill: var(--old-sol);
+        }
+      }
     }
     .hamburger {
       margin-right: $base-line-height;
@@ -45,18 +53,12 @@ body {
       padding-top: 8px;
       margin-left: 1.4rem;
       .toggle span {
-          background: white;
+          background: black;
           display: block;
           margin: 5px 0;
           height: 2px;
           width: 100%;
       }
-    }
-  }
-
-  .scroll-thumb {
-    svg {
-      fill: white;
     }
   }
 
@@ -154,6 +156,7 @@ body {
 
   .menu-content {
     #hamburger-menu {
+      pointer-events: none;
       @extend %serif-font;
       position: absolute;
       top: 0px;
@@ -177,6 +180,7 @@ body {
       }
     }
     #hamburger-menu.active {
+      pointer-events: auto;
       opacity: 1;
       pointer-events: auto;
     }
@@ -196,9 +200,9 @@ body {
       }
     }
     .menu-content {
-      // nav {
-      //   min-width: 12rem;
-      // }
+      nav {
+        min-width: 12rem;
+      }
       nav.menu-nav {
         border: 0;
       }
@@ -230,5 +234,12 @@ body {
         outline: 3px dotted #777;
       }
     }
+  }
+}
+
+
+@media print {
+  nav {
+    display: none;
   }
 }
