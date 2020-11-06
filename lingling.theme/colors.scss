@@ -1,0 +1,31 @@
+/* ultra-bright */
+/*
+$brand-color: white !global;
+$brand-background-color: #ff54ad !global;
+$menu-color: white !global;
+$menu-background-color: #d219c0 !global;
+$border-color: #ff54ad !global;
+$border-width: 0 !global;
+$nav-current-background-color: #ff54ad !global;
+*/
+
+/* gray / pink */
+$brand-color: white !global;
+$brand-background-color: #ff54ad !global;
+$menu-color: white !global;
+$menu-background-color: #7A7A7A !global;
+$border-color: #ff54ad !global;
+$border-width: 0 !global;
+$nav-current-background-color: #ff54ad !global;
+
+body {
+  --brand-color: #{$brand-color};
+  --brand-background-color: #{$brand-background-color};
+  --menu-color: #{$menu-color};
+  --menu-background-color: #{$menu-background-color};
+  --border-color: #{$border-color};
+  --border-width: #{$border-width};
+  --nav-current-background-color: #{$nav-current-background-color};
+  color: var(--brand-color);
+  background-color: var(--brand-background-color);
+}

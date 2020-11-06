@@ -1,10 +1,26 @@
-$brand-color: white;
-$brand-secondary-color: #CCC;
-$brand-background-color: #26444f;
-$menu-color: white;
-$menu-secondary-color: #CCC;
-$menu-background-color: #26444f;
-$border-color: white;
+.menu-driver {
+  header {
+    .location {
+      svg {
+        height: $base-line-height;
+        margin-top: -.8rem;
+        .cls-1 {
+          fill: var(--old-sol);
+        }
+      }
+    }
+  }
+}
+
+
+/* Duplicated, remove this stuff after applying the DRY patch. */
+$brand-color: black;
+$brand-secondary-color: #777;
+$brand-background-color: white;
+$menu-color: black;
+$menu-secondary-color: #777;
+$menu-background-color: white;
+$border-color: #777;
 
 $border-width: 0.05rem;
 
@@ -45,18 +61,12 @@ body {
       padding-top: 8px;
       margin-left: 1.4rem;
       .toggle span {
-          background: white;
+          background: black;
           display: block;
           margin: 5px 0;
           height: 2px;
           width: 100%;
       }
-    }
-  }
-
-  .scroll-thumb {
-    svg {
-      fill: white;
     }
   }
 
@@ -154,6 +164,7 @@ body {
 
   .menu-content {
     #hamburger-menu {
+      pointer-events: none;
       @extend %serif-font;
       position: absolute;
       top: 0px;
@@ -177,6 +188,7 @@ body {
       }
     }
     #hamburger-menu.active {
+      pointer-events: auto;
       opacity: 1;
       pointer-events: auto;
     }
@@ -196,9 +208,9 @@ body {
       }
     }
     .menu-content {
-      // nav {
-      //   min-width: 12rem;
-      // }
+      nav {
+        min-width: 12rem;
+      }
       nav.menu-nav {
         border: 0;
       }
@@ -230,5 +242,12 @@ body {
         outline: 3px dotted #777;
       }
     }
+  }
+}
+
+
+@media print {
+  nav {
+    display: none;
   }
 }
