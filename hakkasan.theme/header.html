@@ -36,6 +36,13 @@
     links = nav_links.search('li')
     links[links.size - 2].remove
 
+    # Fix relative URLs.
+    nav_links.search('a').each do |link|
+      if link['href'] =~ /^\//
+        link['href'] = 'https://hakkasan.com' + link['href']
+      end
+    end
+
     nav_links.to_s
   end
 
