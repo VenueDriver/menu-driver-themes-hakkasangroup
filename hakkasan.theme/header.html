@@ -7,66 +7,56 @@
       </a>
     </div>
 
-    <% if data.location_name =~ /mayfair/i %>
-      <ul id="mayfair-menu" class="menu av-main-nav wide_only wide_nav">
-        <li id="menu-item-1757" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1736 current_page_item menu-item-1757"><a href="https://hakkasan.com/mayfair/menu/" aria-current="page" open-layer="mayfairmenu" class="current">Menu</a></li>
-        <li id="menu-item-18837" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18837"><a href="https://hakkasan.com/mayfair/delivery-takeaway/" open-layer="mayfairdelivery-takeaway">Delivery</a></li>
-        <li id="menu-item-19007" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19007"><a href="https://gifts-uk.hakkasangroup.com/" open-layer="https:gifts-uk.hakkasangroup.com">Gifts</a></li>
-        <li id="menu-item-19008" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19008"><a href="https://hakkasan.com/mayfair/private-events/" open-layer="mayfairprivate-events">Events</a></li>
-        <li id="menu-item-19009" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19009"><a href="https://hakkasan.com/mayfair/gallery/" open-layer="mayfairgallery">Gallery</a></li>
-        <li id="menu-item-18838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18838"><a href="https://hakkasan.com/mayfair/contact/" open-layer="mayfaircontact">Contact</a></li>
-        <li id="menu-item-1366" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1366"><a href="https://hakkasan.com/locations" toggle-layer="locations">Locations</a></li>
-        <li id="menu-item-1379" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1379"><a href="https://hakkasan.com/story/mayfair/" open-layer="storymayfair">Stories</a></li>
-        <li><a href="https://hakkasan.com/mayfair/reservations" class="btn-reservations"><span><span><span>RESERVATIONS</span></span></span></a></li>
-      </ul>
-    <% elsif data.location_name =~ /abu dhabi/i %>
-      <ul id="abu-dhabi-menu" class="menu av-main-nav wide_only wide_nav"><li id="menu-item-1751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1751"><a href="https://hakkasan.com/abu-dhabi/menu/" open-layer="abu-dhabimenu" style="">Menu</a></li>
-        <li id="menu-item-1260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1260"><a href="https://hakkasan.com/abu-dhabi/private-events/" open-layer="abu-dhabiprivate-events" style="">Private events</a></li>
-        <li id="menu-item-2440" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2435 current_page_item menu-item-2440"><a href="https://hakkasan.com/abu-dhabi/terrace/" aria-current="page" open-layer="abu-dhabiterrace" style="">Terrace</a></li>
-        <li id="menu-item-1259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1259"><a href="https://hakkasan.com/abu-dhabi/gallery/" open-layer="abu-dhabigallery" style="">Gallery</a></li>
-        <li id="menu-item-3110" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3110"><a href="https://hakkasan.com/abu-dhabi/contact/" open-layer="abu-dhabicontact" style="">Contact</a></li>
-        <li id="menu-item-1361" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1361"><a href="https://hakkasan.com/locations" toggle-layer="locations" style="">Locations</a></li>
-        <li id="menu-item-1373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1373"><a href="https://hakkasan.com/story/abu-dhabi/" open-layer="storyabu-dhabi" style="">Stories</a></li>
-        <li><a href="https://hakkasan.com/abu-dhabi/reservations" class="btn-reservations" style=""><span><span><span>RESERVATIONS</span></span></span></a></li></ul>
-    <% elsif data.location_name =~ /doha/i %>
-      <ul id="doha-menu" class="menu av-main-nav wide_only wide_nav"><li id="menu-item-1753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1753"><a href="https://hakkasan.com/doha/menu/" open-layer="dohamenu" style="">Menu</a></li>
-        <li id="menu-item-1262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1262"><a href="https://hakkasan.com/doha/private-events/" open-layer="dohaprivate-events" style="">Private events</a></li>
-        <li id="menu-item-1261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1261"><a href="https://hakkasan.com/doha/gallery/" open-layer="dohagallery" style="">Gallery</a></li>
-        <li id="menu-item-3118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3118"><a href="https://hakkasan.com/doha/contact/" open-layer="dohacontact" style="">Contact</a></li>
-        <li id="menu-item-1362" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1362"><a href="https://hakkasan.com/locations" toggle-layer="locations" style="">Locations</a></li>
-        <li id="menu-item-1374" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1374"><a href="https://hakkasan.com/story/doha/" open-layer="storydoha" style="">Stories</a></li>
-        <li><a href="https://hakkasan.com/doha/reservations" class="btn-reservations" style=""><span><span><span>RESERVATIONS</span></span></span></a></li></ul>
-    <% elsif data.location_name =~ /dubai/i %>
-      <ul id="dubai-menu" class="menu av-main-nav wide_only wide_nav"><li id="menu-item-1754" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1722 current_page_item menu-item-1754"><a href="https://hakkasan.com/dubai/menu/" aria-current="page" open-layer="dubaimenu">Menu</a></li>
-        <li id="menu-item-1264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1264"><a href="https://hakkasan.com/dubai/private-events/" open-layer="dubaiprivate-events">Private events</a></li>
-        <li id="menu-item-1263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1263"><a href="https://hakkasan.com/dubai/gallery/" open-layer="dubaigallery">Gallery</a></li>
-        <li id="menu-item-3130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3130"><a href="https://hakkasan.com/dubai/contact/" open-layer="dubaicontact">Contact</a></li>
-        <li id="menu-item-1363" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1363"><a href="https://hakkasan.com//locations" toggle-layer="locations">Locations</a></li>
-        <li id="menu-item-1375" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1375"><a href="https://hakkasan.com/story/dubai/" open-layer="storydubai">Stories</a></li>
-        <li><a href="https://hakkasan.com/dubai/reservations" class="btn-reservations"><span><span><span>RESERVATIONS</span></span></span></a></li></ul>
-    <% elsif data.location_name =~ /mumbai/i %>
-      <ul id="mumbai-menu" class="menu av-main-nav wide_only wide_nav"><li id="menu-item-1758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href="https://hakkasan.com/mumbai/menu/" open-layer="mumbaimenu">Menu</a></li>
-        <li id="menu-item-19001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19001"><a href="https://home.dishco.com/kahospitality/?Accountid=4#/" open-layer="https:home.dishco.comkahospitality?accountid=4#">Delivery</a></li>
-        <li id="menu-item-1266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1266"><a href="https://hakkasan.com/mumbai/private-events/" open-layer="mumbaiprivate-events">Private events</a></li>
-        <li id="menu-item-1265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1265"><a href="https://hakkasan.com/mumbai/gallery/" open-layer="mumbaigallery">Gallery</a></li>
-        <li id="menu-item-3335" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3335"><a target="_blank" rel="noopener noreferrer" href="https://www.kahospitality.com/?page_id=580" open-layer="https:www.kahospitality.com?page_id=580">Gift Vouchers</a></li>
-        <li id="menu-item-3176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3176"><a href="https://hakkasan.com/mumbai/contact/" open-layer="mumbaicontact">Contact</a></li>
-        <li id="menu-item-1368" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1368"><a href="https://hakkasan.com/locations" toggle-layer="locations">Locations</a></li>
-        <li id="menu-item-1381" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1381"><a href="https://hakkasan.com/story/mumbai/" open-layer="storymumbai">Stories</a></li>
-        <li><a href="https://hakkasan.com/mumbai/reservations" class="btn-reservations"><span><span><span>RESERVATIONS</span></span></span></a></li></ul>
-    <% else %>
-      <ul id="hanway-place-menu" class="menu av-main-nav wide_only wide_nav">
-        <li id="menu-item-1755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1755"><a href="https://hakkasan.com/hanway-place/menu/" open-layer="hanway-placemenu" style="" class="current">Menu</a></li>
-        <li id="menu-item-18898" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18898"><a href="https://hakkasan.com/mayfair/delivery-takeaway/" open-layer="mayfairdelivery-takeaway" style="">Delivery</a></li>
-        <li id="menu-item-19010" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19010"><a href="https://gifts.hakkasan.com/" open-layer="https:gifts.hakkasan.com" style="">Gifts</a></li>
-        <li id="menu-item-19011" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19011"><a href="https://hakkasan.com/hanway-place/private-events/" open-layer="hanway-placeprivate-events" style="">Events</a></li>
-        <li id="menu-item-19012" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19012"><a href="https://hakkasan.com/hanway-place/gallery/" open-layer="hanway-placegallery" style="">Gallery</a></li>
-        <li id="menu-item-18975" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18975"><a href="https://hakkasan.com/hanway-place/contact/" open-layer="hanway-placecontact" style="">Contact</a></li>
-        <li id="menu-item-1360" class="show-desktop menu-item menu-item-type-custom menu-item-object-custom menu-item-1360"><a href="https://hakkasan.com/locations" toggle-layer="locations" style="">Locations</a></li>
-        <li id="menu-item-1376" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1376"><a href="https://hakkasan.com/story/hanway-place/" open-layer="storyhanway-place" style="">Stories</a></li>
-        <li class="reservations"><a href="https://hakkasan.com/hanway-place/reservations" class="btn-reservations"><span><span><span>RESERVATIONS</span></span></span></a></li>
-      </ul>
-    <% end %>
+<%=
+  def fetch(location_path:)
+    Nokogiri::HTML(
+      # Fetch this URL.
+      open("https://hakkasan.com/#{location_path}")
+    # Extract this part of it to a string.
+    ).css('.main_menu-desktop').to_s
+  end
+
+  def massage(html:)
+    nav_links = Nokogiri::HTML( html ).css('ul')
+
+    # Add classes from this Menu Driver theme.
+    nav_links.search('ul').each do |ul_element|
+      ul_element['class'] = ul_element['class'] << ' wide_only wide_nav'
+    end
+
+    # Add 'current' to the 'menu' link.
+    nav_links.search('a').each do |link|
+      if link.content =~ /menu/i
+        link['class'] ||= ''
+        link['class'] = link['class'] << ' current'
+      end
+    end
+
+    # Remove the second-to-last LI item.
+    links = nav_links.search('li')
+    links[links.size - 2].remove
+
+    nav_links.to_s
+  end
+
+  # Grab the navigation links from the main site and massage them a little.
+  case data.location_name
+  when /mayfair/i
+    massage( html: fetch( location_path: 'mayfair' ) )
+  when /hanway/i
+    massage( html: fetch( location_path: 'hanway-place' ) )
+  when /abu dhabi/i
+    massage( html: fetch( location_path: 'abu-dhabi' ) )
+  when /doha/i
+    massage( html: fetch( location_path: 'doha' ) )
+  when /dubai/i
+    massage( html: fetch( location_path: 'dubai' ) )
+  when /mumbai/i
+    massage( html: fetch( location_path: 'mumbai' ) )
+  when /miami/i
+    massage( html: fetch( location_path: 'miami' ) )
+  end
+%>
 
 </header>
 
