@@ -7,3 +7,9 @@
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .menu-driver .menu-content nav.menu-nav {
+    position: sticky;
+  }
+}
