@@ -15,8 +15,8 @@ $border-color: $brand-primary-light-color;
 body {
   --brand-primary-dark-color: #{$brand-primary-light-color};
   --brand-primary-light-color: #{$brand-primary-dark-color};
-  --brand-secondary-color: #{$brand-secondary-color};
-  --brand-accent-color: #{brand-accent-color};
+  --brand-secondary-color: #{$brand-primary-light-color};
+  --brand-accent-color: #{$brand-accent-color};
   --border-color: #{$border-color};
 
   color: #{$brand-primary-light-color};
@@ -28,8 +28,8 @@ body {
   body {
     --brand-primary-dark-color: #{$brand-primary-dark-color};
     --brand-primary-light-color: #{$brand-primary-light-color};
-    --brand-secondary-color: #{$brand-secondary-color};
-    --brand-accent-color: #{brand-accent-color};
+    --brand-secondary-color: #{$brand-primary-dark-color};
+    --brand-accent-color: #{$brand-accent-color};
 
     color: #{$brand-primary-dark-color};
     background-color: #{$brand-primary-light-color};
