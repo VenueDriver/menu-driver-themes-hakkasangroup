@@ -17,6 +17,17 @@
 	z-index: 99999999;
 }
 
+.siteHeader__col_logo {
+  margin-top: 25px !important;
+}
+
+.siteHeaderLogo a {
+	font-size: 20px;
+	line-height: 0;
+	fill: #ffffff;
+	margin: 0 auto;
+}
+
 #nav-icon {
 	width: 40px;
 	height: 10px;
@@ -107,12 +118,15 @@
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 5px;
+  margin-top: 10% !important;
     }
 
 .ham-menu-item {
   opacity: 0.4;
   transition: opacity 333ms linear;
   line-height: 65px;
+  margin: 20px !important;
 }
 
 .ham-menu-item a {
@@ -123,6 +137,7 @@
   font-weight: normal;
   text-decoration: none;
   text-transform: none;
+  text-align: left !important;
 }
 
 .ham-menu-item a:hover {
@@ -144,6 +159,7 @@
     display: grid;
     grid-template-columns: repeat(1, 100%);
     padding-top: 40%;
+    transition: all 0.3s ease;
 }
 
 .menu-row {
