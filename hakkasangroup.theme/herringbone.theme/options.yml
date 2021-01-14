@@ -1,3 +1,6 @@
 herringbone-0:
-  location: herringbone-0
-  theme: herringbone
+  :theme: herringbone
+herringbone-santa-monica:
+  :theme: herringbone
+herringbone-waikiki:
+  :theme: herringbone

@@ -1,6 +1,12 @@
 hakkasan-mayfair:
-  theme: hakkasan
+  :theme: hakkasan
 hakkasan-hanway-place:
-  theme: hakkasan
+  :theme: hakkasan
+hakkasan-abu-dhabi:
+  :theme: hakkasan
 hakkasan-doha:
-  theme: hakkasan
+  :theme: hakkasan
+hakkasan---dubai:
+  :theme: hakkasan
+hakkasan-mumbai:
+  :theme: hakkasan
