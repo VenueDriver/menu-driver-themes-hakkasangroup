@@ -1,7 +1,7 @@
-"'v'": '<svg class="md-svg-leaf" viewBox="0 0 86.2 150"><use x="0px" y="0px" xlink:href="#leaf1" /></svg>'
+"'v'":  '<svg class="md-svg" viewBox="0 0 86.2 150"><use x="0px" y="0px" xlink:href="#leaf1" /></svg>'
 
-"'vg'": '<svg class="md-svg-twoleaf" viewBox="0 0 148.2 150"><use x="0px" y="0px" xlink:href="#twoleaf1" /></svg>'
+"'vg'": '<svg class="md-svg" viewBox="0 0 148.2 150"><use x="0px" y="0px" xlink:href="#twoleaf1" /></svg>'
 
-"'g'": '<svg class="md-svg-fern" viewBox="0 0 91.6 165"><use x="0px" y="0px" xlink:href="#fern1" /></svg>'
+"'g'":  '<svg class="md-svg" viewBox="0 0 91.6 165"><use x="0px" y="0px" xlink:href="#fern1" /></svg>'
 
-"'s'": '<svg class="md-svg-hk" viewBox="0 0 160.1 150"><use x="0px" y="0px" xlink:href="#hk1" /></svg>'
+"'s'":  '<svg class="md-svg" viewBox="0 0 160.1 150"><use x="0px" y="0px" xlink:href="#hk1" /></svg>'

@@ -1,24 +1,7 @@
 /* Ovewrride this file in any theme to add custom styles. */
-.md-svg-leaf {
-  fill: $brand-secondary-color;
-  height: $base-line-height;
-  width: 1em;
-  }
 
-.md-svg-twoleaf {
+.md-svg {
   fill: $brand-secondary-color;
-  height: $base-line-height;
-  width: 1em;
-}
-
-.md-svg-fern {
-  fill: $brand-secondary-color;
-  height: $base-line-height;
-  width: 1em;
-}
-
-.md-svg-hk {
-  fill: $brand-secondary-color;
-  height: $base-line-height;
-  width: 1.4em;
+  height: 0.9rem;
+  margin-bottom: -1px;
 }
