@@ -1,10 +1,43 @@
-%serif-font {
-  font-family: 'Arial', Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+@import url("https://use.typekit.net/hbs3agi.css");
+
 %sans-serif-font {
-  font-family: 'futura-pt', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: futura-pt;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em
+}
+
+%serif-font {
+    font-family: futura-pt;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .1em
+}
+
+.menu-driver {
+  @extend %sans-serif-font;
+
+  .menu > .name, .category > .category_name {
+    @extend %sans-serif-font;
+  }
+  .menu {
+    .section > .meta > .name {
+      @extend %sans-serif-font;
+    }
+    .section {
+      .item {
+        .name {
+          @extend %sans-serif-font;
+        }
+        .description {
+          @extend %sans-serif-font;
+        }
+      }
+    }
+  }
+
+}
+
+nav {
+  @extend %serif-font;
 }

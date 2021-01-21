@@ -165,7 +165,7 @@ body {
   .menu-content {
     #hamburger-menu {
       pointer-events: none;
-      @extend %serif-font;
+      @extend %sans-serif-font;
       position: absolute;
       top: 0px;
       bottom: 0px;
