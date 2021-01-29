@@ -1,14 +1,58 @@
 <div id="hamburger-menu">
-  <ul>
-    <li class="current-menu-item menu-item-1636 av-active-burger-items"><a href="https://yauatcha.com" itemprop="url" style=""><span class="avia-bullet"></span><span class="avia-menu-text">Home</span><span
-          class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
-    <li class="menu-item-1662 av-active-burger-items"><a href="https://yauatcha.com/about/" itemprop="url" style=""><span class="avia-bullet"></span><span class="avia-menu-text">About</span><span
-          class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
-    <li class="menu-item-1566 av-active-burger-items"><a href="https://yauatcha.com/blog/" itemprop="url" style=""><span class="avia-bullet"></span><span class="avia-menu-text">Blog</span><span class="avia-menu-fx"><span
-            class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
-    <li class="menu-item-1565 av-active-burger-items"><a href="https://yauatcha.com/patisserie" itemprop="url" style=""><span class="avia-bullet"></span><span class="avia-menu-text">Patisserie</span><span class="avia-menu-fx"><span
-            class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
-    <li class="menu-item-1567 av-active-burger-items"><a href="<%= data.location_website %>/private-events/" itemprop="url" style=""><span class="avia-bullet"></span><span class="avia-menu-text">Private Events</span><span
-          class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
-  </ul>
+  <%=
+    def simple_fetch(location_path:)
+      Nokogiri::HTML(
+        # Fetch this URL.
+        open(URI.join('https://2020-staging.yauatcha.com', location_path))
+      # Extract this part of it to a string.
+      ).css('.jet-menu').to_s
+    end
+
+    # Supports HTTP Basic over SSL
+    def password_fetch(location_path:)
+      require 'net/http'
+      require 'openssl'
+      uri = URI("https://2020-staging.yauatcha.com/#{location_path}/")
+      puts "FETCHING: #{uri}"
+      Net::HTTP.start(uri.host, uri.port,
+        :use_ssl => uri.scheme == 'https',
+        :verify_mode => OpenSSL::SSL::VERIFY_NONE) do |http|
+
+        request = Net::HTTP::Get.new uri.request_uri
+        request.basic_auth 'admin', 'hkadmin'
+
+        response = http.request request # Net::HTTPResponse object
+
+        puts response
+        return Nokogiri::HTML(response.body).css('.jet-menu').to_s
+      end
+
+    end
+
+    def massage(html:)
+      nav_links = Nokogiri::HTML( html )
+
+      # Remove the last two items.
+      links = nav_links.css('ul.jet-menu > li')
+      links[links.size - 2].remove
+
+      # Fix relative URLs.
+      nav_links.search('a').each do |link|
+        if link['href'] =~ /^\//
+          link['href'] =
+            URI.join('https://2020-staging.yauatcha.com', link['href'])
+        end
+      end
+
+      nav_links.css('ul.jet-menu').to_s
+    end
+
+    # Grab the navigation links from the main site and massage them a little.
+    case location_id
+    when /yauatcha-soho-0/i
+      massage( html: password_fetch( location_path: 'soho' ) )
+    when /yauatcha-city/i
+      massage( html: password_fetch( location_path: 'city' ) )
+    end
+  %>
 </div>

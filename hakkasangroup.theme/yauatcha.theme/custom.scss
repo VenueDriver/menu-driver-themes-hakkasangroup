@@ -51,10 +51,42 @@
 }
 
 .menu-driver {
+  padding-top: 0;
   header {
+    margin-bottom: 0;
+    height: 70px;
+    padding-top: 30px;
+    padding-left: $base-line-height;
+    text-align: left;
+    align-items: center;
     .location {
+      flex: 1 0;
       svg {
-        height: $base-line-height;
+        width: 218px;
+        height: unset;
+        margin-top: unset;
+        fill: $brand-accent-color;
+      }
+      margin-left: unset;
+    }
+    .order_now {
+      flex: 1 0;
+    }
+    .button {
+      flex: 1 0;
+      text-align: right;
+    }
+    .wide_header_nav_links {
+      flex: 2 1;
+      li {
+        padding-left: 10px;
+        display: inline-block;
+        div {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: $brand-primary-dark-color;
+        }
       }
     }
   }
@@ -105,4 +137,60 @@
 
 .menu-driver .menu-content #hamburger-menu {
   top: $base-line-height;
+  font-weight: 700;
+  font-size: 28.8px;
+  line-height: 43.2px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  ul {
+    font-weight: 700;
+    li {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  div {
+    margin: 0;
+    font-size: unset;
+    line-height: unset;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-driver {
+    header {
+      padding-left: 0;
+    }
+  }
+}
+
+// The header changes to mobile mode at a DIFFERENT breakpoint than the
+// rest of the interface, because the heading has so many navigation links.
+@media only screen and (min-width: 1024px) {
+  .menu-driver {
+
+    header {
+      .logo {
+        margin-left: 0;
+      }
+      .location {
+        flex: 1;
+        div {
+          padding-left: $base-line-height;
+        }
+      }
+    }
+
+    .wide_only {
+      display: flex;
+      justify-content: flex-end;
+      // @include type-setting(-2);
+      // font-family: 'Rotis', serif;
+      // font-weight: 300;
+      text-align: left;
+    }
+    .narrow_only {
+      display: none;
+    }
+  }
 }
