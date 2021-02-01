@@ -3,7 +3,7 @@
     def simple_fetch(location_path:)
       Nokogiri::HTML(
         # Fetch this URL.
-        open(URI.join('https://2020-staging.yauatcha.com', location_path))
+        open(URI.join('https://yauatcha.com', location_path))
       # Extract this part of it to a string.
       ).css('.jet-menu').to_s
     end
@@ -12,7 +12,7 @@
     def password_fetch(location_path:)
       require 'net/http'
       require 'openssl'
-      uri = URI("https://2020-staging.yauatcha.com/#{location_path}/")
+      uri = URI("https://yauatcha.com/#{location_path}/")
       puts "FETCHING: #{uri}"
       Net::HTTP.start(uri.host, uri.port,
         :use_ssl => uri.scheme == 'https',
@@ -40,7 +40,7 @@
       nav_links.search('a').each do |link|
         if link['href'] =~ /^\//
           link['href'] =
-            URI.join('https://2020-staging.yauatcha.com', link['href'])
+            URI.join('https://yauatcha.com', link['href'])
         end
       end
 
