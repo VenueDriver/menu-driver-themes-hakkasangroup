@@ -27,7 +27,7 @@
     end
 
     # Grab the navigation links from the main site and massage them a little.
-    case data.location_name
+    case location_id
     when /mayfair/i
       massage( html: fetch( location_path: 'mayfair' ) )
     when /hanway/i

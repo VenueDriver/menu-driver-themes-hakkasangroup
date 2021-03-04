@@ -1,0 +1,41 @@
+@import url("https://use.typekit.net/hbs3agi.css");
+
+%sans-serif-font {
+    font-family: futura-pt;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%serif-font {
+    font-family: futura-pt;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu-driver {
+  @extend %sans-serif-font;
+
+  .menu > .name, .category > .category_name {
+    @extend %sans-serif-font;
+  }
+  .menu {
+    .section > .meta > .name {
+      @extend %sans-serif-font;
+    }
+    .section {
+      .item {
+        .name {
+          @extend %sans-serif-font;
+        }
+        .description {
+          @extend %sans-serif-font;
+        }
+      }
+    }
+  }
+
+}
+
+nav {
+  @extend %serif-font;
+}
