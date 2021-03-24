@@ -13,3 +13,7 @@ wet-republic-ultra-pool:
 liquid-pool-lounge:
   :location: liquid-pool-lounge
   :theme: hakkasangroup
+
+hakkasan-las-vegas:
+  :location: hakkasan-las-vegas
+  :theme: hakkasangroup
