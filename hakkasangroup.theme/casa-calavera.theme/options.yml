@@ -2,3 +2,7 @@ casa-calavera:
   :theme: casa-calavera
 casa-calavera-las-vegas:
   :theme: casa-calavera
+
+casa-calavera-las-vegas:
+  :location: casa-calavera-las-vegas
+  :theme: casa-calavera

@@ -1,1 +1,7 @@
 /* Ovewrride this file in any theme to add custom styles. */
+
+.md-svg {
+  fill: $brand-secondary-color;
+  height: 0.9rem;
+  margin-bottom: -1px;
+}
