@@ -156,6 +156,14 @@
   }
 }
 
+
+@media only screen and (max-width:1024px) {
+  .wide_only{
+    display: none !important;
+  }
+}
+
+
 @media only screen and (min-width: 768px) {
   .menu-driver {
     header {

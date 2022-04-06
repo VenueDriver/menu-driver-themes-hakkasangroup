@@ -83,6 +83,24 @@
   });
 </script>
 
+<input id="site-name" name='site-name' type='hidden' value="<%= data.location_name %> "/>
+<script>
+    function removeFirstWord(str) {
+      const indexOfSpace = str.indexOf(' ');
+      if (indexOfSpace === -1) {
+        return '';
+      }
+      return str.substring(indexOfSpace + 1);
+    }
+    var els = document.querySelectorAll('.btn-reservations');
+    var locationName = document.getElementById('site-name').value;
+    locationName = locationName.trim();
+    locationName = removeFirstWord(locationName);
+    locationName = locationName.toLowerCase();
+    els.forEach(el => {
+      el.setAttribute('href','https://hakkasan.com/'+locationName+'/reservations/');
+    });
+</script>
 <style class="embed">
   /* custom reset */
   header {
