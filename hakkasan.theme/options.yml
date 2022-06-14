@@ -19,3 +19,6 @@ hakkasan-mumbai:
 hakkasan-shanghai:
   :location: hakkasan-shanghai
   :theme: hakkasan
+hakkasan-restaurant:
+  :location: hakkasan-restaurant
+  :theme: hakkasan
