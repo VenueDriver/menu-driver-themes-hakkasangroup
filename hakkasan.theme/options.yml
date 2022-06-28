@@ -22,3 +22,6 @@ hakkasan-shanghai:
 hakkasan-restaurant:
   :location: hakkasan-restaurant
   :theme: hakkasan
+hakkasan-bodrum:
+  :location: hakkasan-bodrum
+  :theme: hakkasan
