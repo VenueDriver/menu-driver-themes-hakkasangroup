@@ -28,3 +28,6 @@ hakkasan-restaurant:
 hakkasan-bodrum:
   :location: hakkasan-bodrum
   :theme: hakkasan
+hakkasan-riyadh:
+  :location: hakkasan-riyadh
+  :theme: hakkasan
