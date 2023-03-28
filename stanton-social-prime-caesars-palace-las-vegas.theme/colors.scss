@@ -1,0 +1,24 @@
+$brand-color: #1D3C34 !global;
+$brand-secondary-color: #1D3C34 !global;
+$brand-background-color: #EBE3D7 !global;
+$brand-background-alternate-color: #222 !global;
+$menu-color: #646e6c !global;
+$menu-secondary-color: #646e6c !global;
+$menu-background-color: #EBE3D7 !global;
+$border-color: #1D3C34 !global;
+$border-dark-color: #162420 !global;
+
+body {
+  --brand-color: #{$brand-color};
+  --brand-secondary-color: #{$brand-secondary-color};
+  --brand-background-color: #{$brand-background-color};
+  --brand-background-alternate-color: #{$brand-background-alternate-color};
+  --menu-color: #{$menu-color};
+  --menu-secondary-color: #{$menu-secondary-color};
+  --menu-background-color: #{$menu-background-color};
+  --border-color: #{$border-color};
+  --border-dark-color: #{$border-dark-color};
+  --border-widtn: #{$border-width};
+  color: var(--brand-color);
+  background-color: var(--brand-background-color);
+}

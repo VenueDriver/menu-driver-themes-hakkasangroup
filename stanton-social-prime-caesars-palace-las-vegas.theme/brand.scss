@@ -1,0 +1,406 @@
+$border-width: 0.05rem !global;
+
+.menu-driver {
+  padding: 0 0 0 0!important;
+  header {
+    @extend %sans-serif-font;
+    letter-spacing: $base-line-height * 0.03571428571; // 1px at 1:1 == height * 1/28
+    text-transform: uppercase;
+    margin-bottom: 0;
+    .logo {
+      margin-left: $base-line-height;
+    }
+    a {
+      line-height: 1rem;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    div {
+      margin: 0;
+    }
+    .location {
+      flex: 1;
+    }
+    .hamburger {
+      margin-right: $base-line-height;
+      width: $base-line-height;
+      .toggle span {
+          background: #EBE3D7;
+          display: block;
+          margin: 7px 0;
+          height: 2px;
+          width: 100%;
+      }
+    }
+  }
+
+  .menu {
+    color: var(--menu-color);
+    background-color: var(--menu-background-color);
+    border-color: $brand-background-color;
+    padding-top: 0;
+    border-top-width: 0;
+    margin-top: $base-line-height * 2;
+    .description {
+      color: var(--menu-secondary-color);
+    }
+    .section {
+      .name {
+        color: var(--brand-color);
+        border: unset;
+        @include type-setting(0);
+        margin: 0;
+      }
+      .description {
+        color: var(--menu-secondary-color);
+      }
+    }
+    .section > .name {
+      margin: 0;
+    }
+    .section > .meta > .description {
+      font-style: italic;
+    }
+    .section + .section {
+      padding-top: $base-line-height - $border-width;
+      border-top: $border-width solid var(--border-color);
+    }
+  }
+  .menu > .name, .category > .category_name {
+    color: var(--brand-secondary-color);
+    text-align: left;
+    margin-bottom: - $border-width;
+    border-bottom: $border-width solid var(--border-color);
+  }
+  .category > .category_name {
+    margin-bottom: 2rem;
+  }
+  .menu > .description {
+    font-style: italic;
+  }
+  .menu.rtl {
+    text-align: right;
+
+    .name {
+      text-align: right;
+    }
+  }
+
+  .guide {
+    &, &:before, &:after {
+      outline: 1px dotted white;
+    }
+  }
+
+  nav.category-nav, nav.menu-nav {
+    font-weight: 600;
+    background-color: var(--brand-background-color);
+    border-bottom-color: var(--brand-background-color);
+    border-bottom-width: $border-width;
+    margin-bottom: 0;
+    line-height: $base-line-height - $border-width;
+    align-items: flex-end;
+
+    ul {
+      background-color: var(--brand-background-color);
+      padding-bottom: 0;
+
+      li {
+        a.current, a:visited.current {
+          color: var(--border-color);
+          background-color: unset;
+          border-bottom: $border-width solid var(--border-color);
+        }
+        a, a:visited, a:hover, a:active {
+          color: inherit;
+        }
+      }
+      // The category navigation puts the 'current' class on the <li> instead of the
+      // <a> within it.  TODO: Make that more consistent and DRY these styles.
+      li.current {
+        a, a:visited {
+          color: var(--border-color);
+          background-color: unset;
+          border-bottom: $border-width solid var(--border-color);
+        }
+      }
+      // Skip the underline for the category name if it's a single-category menu.
+      li.current:only-child a, a:visited {
+        border-bottom: 0;
+      }
+    }
+
+  }
+  #category-nav-thumb {
+    background-color: var(--brand-background-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  nav, #category-nav-thumb {
+    .scroll-thumb {
+      svg {
+        fill: var(--brand-secondary-color);
+      }
+    }
+  }
+  nav.category-nav {
+    z-index: 3;
+  }
+  nav.menu-nav {
+    top: $base-line-height;
+    padding-bottom: $base-line-height;
+    box-shadow: 0px 6px 20px -6px var(--border-dark-color);
+  }
+  .menus {
+    margin-top: -$base-line-height;
+  }
+
+  .menu {
+    a.anchor {
+      display: block;
+      position: relative;
+      top: - ($base-line-height * 6);
+    }
+  }
+
+  nav.menu-nav, nav.category-nav {
+    border-style: solid;
+    border-top: $border-width;
+    border-bottom-color: var(--brand-background-color);
+    border-bottom-width: $border-width;
+    border-bottom-style: solid;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  nav.category-nav {
+    margin-bottom: 0;
+  }
+
+  padding-left: 0;
+  padding-right: 0;
+
+  .menu-content {
+    margin: 0 2vw;
+    #hamburger-menu {
+      @extend %serif-font;
+      position: absolute;
+      top: $base-line-height;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      background-color: $brand-background-color;
+      z-index: 4;
+      transition: 1s;
+      transition-timing-function: ease-in-out;
+      padding-left: $base-line-height;
+      opacity: 0;
+      pointer-events: none;
+
+      li {
+        a, a:visited {
+          color: $brand-color;
+          text-decoration: none;
+        }
+        padding-bottom: $base-line-height;
+      }
+    }
+    #hamburger-menu.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  #cookie-notice {
+    color: var(--menu-secondary-color);
+    border-style: none;
+    box-shadow: -2px 0px 20px 1px var(--border-dark-color);
+    a, a:visited {
+      background-color: var(--menu-secondary-color);
+    }
+  }
+
+  .scroll-thumb {
+    background-color: var(--brand-background-color);
+  }
+}
+
+.wide_only {
+  display: none;
+}
+.menu-driver {
+  header {
+    a {
+      text-decoration-line: none;
+    }
+    .wide_only, .location {
+      padding-left: 0;
+      // white-space: nowrap;
+    }
+    .wide_nav {
+      flex: 1;
+      padding: 0;
+      margin: 0;
+      text-align: right;
+      white-space: nowrap;
+    }
+    li {
+      font-weight: 600;
+      display: inline;
+      list-style-type: none;
+      padding-left: $base-line-height;
+      border-width: 0;
+      a {
+        margin-top: -1rem;
+      }
+      a.btn-reservations {
+        padding-top: 14px;
+        padding-bottom: 13px;
+        padding-left: 9px;
+        padding-right: 9px;
+      }
+    }
+  }
+  .legend {
+    display: none;
+  }
+  .fa-camera {
+    opacity: 0.5;
+  }
+  #menu-item-image {
+    color: var(--menu-color);
+    background-color: var(--menu-background-color);
+    z-index: 5;
+    #close-icon {
+      color: var(--menu-color);
+    }
+  }
+}
+
+// The header changes to mobile mode at a DIFFERENT breakpoint than the
+// rest of the interface, because the heading has so many navigation links.
+@media only screen and (min-width: 980px) {
+  .menu-driver {
+
+    header {
+      font-weight: 600;
+      .logo {
+        margin-left: 0;
+      }
+      .location {
+        flex: 1;
+        @include type-setting(-2);
+        font-family: 'Amarante';
+        font-weight: 300;
+        text-align: left;
+        div {
+          padding-left: $base-line-height;
+        }
+      }
+    }
+
+    .wide_only {
+      display: flex;
+      justify-content: flex-end;
+      @include type-setting(-2);
+      font-family: 'EBGaramond', regular;
+      font-weight: 300;
+      text-align: left;
+    }
+    .narrow_only {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    padding-top: 0;
+  }
+
+  .menu-driver {
+
+    padding-top: 0;
+    header {
+      position: sticky;
+      top: 0;
+      padding-top: $base-line-height * 0.892857; // 25px at 1:1 == height * 33/28
+      z-index: 5;
+      .location {
+        div {
+          margin-top: $base-line-height * 0.25; // 7px at 1:1 == height * 7/28
+          padding-left: 0;
+        }
+      }
+      .logo {
+        margin-top: $base-line-height * 0.03571428571; // 1px
+        padding-right: $base-line-height * 1.1071428571; // 31px at 1:1 == height * 31/28
+        img {
+          width: $base-line-height * 1.17857; // 33px at 1:1 == height * 33/28
+        }
+      }
+      ul.menu {
+        margin-top: $base-line-height * 0.25; // 7px at 1:1 == height * 7/28
+        padding-right: $base-line-height * 0.1071429; // 3px at 1:1 == height * 3/28
+        li {
+          padding-left: $base-line-height * 0.7142857143; // 20px at 1:1 == height * 20/28
+          a.current, a:visited.current {
+            color: var(--border-color);
+          }
+        }
+        li.reservations {
+          margin-top: -$base-line-height * 0.03571428571; // 1px
+        }
+      }
+    }
+
+    // padding-left: $base-line-height;
+    // padding-right: $base-line-height;
+    // Super-precise integration with the main site's desktop layout.
+    padding-left: $base-line-height * 1.321429; // 37 pixels at 1:1 == height * 37/28
+    padding-right: $base-line-height * 1.321429;
+
+    .menu-content {
+      nav {
+        min-width: 12rem;
+        @include type-setting(0);
+      }
+      nav.menu-nav {
+        border: 0;
+        box-shadow: none;
+      }
+      nav.category-nav, nav.menu-nav {
+        background-color: var(--brand-background-color);
+      }
+      .menu {
+        margin-top: $base-line-height;
+        a.anchor {
+          display: block;
+          position: relative;
+          top: - ($base-line-height * 5);
+        }
+      }
+    }
+    .legend {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  .menu-driver {
+    header {
+      ul.menu.av-main-nav {
+        font-size: 13px;
+        li {
+          padding-left: 26px;
+          a.btn-reservations {
+            padding-left: 19px;
+            padding-right: 19px;
+          }
+        }
+      }
+    }
+  }
+}
