@@ -1,0 +1,48 @@
+<div id="hamburger-menu">
+
+  <%=
+    def fetch(location_path:)
+      Nokogiri::HTML(
+        # Fetch this URL.
+        open("https://hakkasan.com/#{location_path}")
+      # Extract this part of it to a string.
+      ).css('.main_menu-desktop').to_s
+    end
+
+    def massage(html:)
+      nav_links = Nokogiri::HTML( html ).search('ul').first
+
+      # Remove the second-to-last LI item.
+      links = nav_links.search('li')
+      links[links.size - 2].remove
+
+      # Fix relative URLs.
+      nav_links.search('a').each do |link|
+        if link['href'] =~ /^\//
+          link['href'] = 'https://hakkasan.com' + link['href']
+        end
+      end
+
+      nav_links.to_s
+    end
+
+    # Grab the navigation links from the main site and massage them a little.
+    case location_id
+    when /mayfair/i
+      massage( html: fetch( location_path: 'mayfair' ) )
+    when /hanway/i
+      massage( html: fetch( location_path: 'hanway-place' ) )
+    when /abu dhabi/i
+      massage( html: fetch( location_path: 'abu-dhabi' ) )
+    when /doha/i
+      massage( html: fetch( location_path: 'doha' ) )
+    when /dubai/i
+      massage( html: fetch( location_path: 'dubai' ) )
+    when /mumbai/i
+      massage( html: fetch( location_path: 'mumbai' ) )
+    when /miami/i
+      massage( html: fetch( location_path: 'miami' ) )
+    end
+  %>
+
+</div>
