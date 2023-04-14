@@ -1,0 +1,446 @@
+<div id='lazyFooter'></div>
+<script>
+    function footerCallback(json_data) {
+        document.getElementById('lazyFooter').outerHTML = json_data[0];
+    }
+    window.onload = function () {
+        var script = document.createElement('script');
+        script.src = 'https://staging.footers.hakkasangroup.com/taogroup/taogroup.min.json'
+        script.async = true;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    }
+</script>
+<style class="embed">
+    #tao-footer .site-footer__menus a {
+        font-size: 13px !important;
+    }
+
+
+    #tao-footer span {
+        font-size: 12px
+    }
+
+    #tao-footer ul li a {
+        font-size: 12px
+    }
+
+    #tao-footer,
+    #tao-footer div {
+        margin: 0 0 0 0 !important;
+    }
+
+    @media (min-width: 1200px) {
+        #tao-footer .col-xl-2 {
+            flex: 0 0 25% !important;
+            max-width: 25% !important;
+        }
+    }
+
+
+    /* custom reset */
+
+    #footer div,
+    #footer .menu {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    /* layout tweak */
+
+    #footer {
+        padding-left: 1.4rem;
+    }
+
+    /* From enfold_child.css */
+
+    .footer_color,
+    .footer_color div,
+    .footer_color header,
+    .footer_color main,
+    .footer_color aside,
+    .footer_color footer,
+    .footer_color article,
+    .footer_color nav,
+    .footer_color section,
+    .footer_color span,
+    .footer_color applet,
+    .footer_color object,
+    .footer_color iframe,
+    .footer_color h1,
+    .footer_color h2,
+    .footer_color h3,
+    .footer_color h4,
+    .footer_color h5,
+    .footer_color h6,
+    .footer_color p,
+    .footer_color blockquote,
+    .footer_color pre,
+    .footer_color a,
+    .footer_color abbr,
+    .footer_color acronym,
+    .footer_color address,
+    .footer_color big,
+    .footer_color cite,
+    .footer_color code,
+    .footer_color del,
+    .footer_color dfn,
+    .footer_color em,
+    .footer_color img,
+    .footer_color ins,
+    .footer_color kbd,
+    .footer_color q,
+    .footer_color s,
+    .footer_color samp,
+    .footer_color small,
+    .footer_color strike,
+    .footer_color strong,
+    .footer_color sub,
+    .footer_color sup,
+    .footer_color tt,
+    .footer_color var,
+    .footer_color b,
+    .footer_color u,
+    .footer_color i,
+    .footer_color center,
+    .footer_color dl,
+    .footer_color dt,
+    .footer_color dd,
+    .footer_color ol,
+    .footer_color ul,
+    .footer_color li,
+    .footer_color fieldset,
+    .footer_color form,
+    .footer_color label,
+    .footer_color legend,
+    .footer_color table,
+    .footer_color caption,
+    .footer_color tbody,
+    .footer_color tfoot,
+    .footer_color thead,
+    .footer_color tr,
+    .footer_color th,
+    .footer_color td,
+    .footer_color article,
+    .footer_color aside,
+    .footer_color canvas,
+    .footer_color details,
+    .footer_color embed,
+    .footer_color figure,
+    .footer_color fieldset,
+    .footer_color figcaption,
+    .footer_color footer,
+    .footer_color header,
+    .footer_color hgroup,
+    .footer_color menu,
+    .footer_color nav,
+    .footer_color output,
+    .footer_color ruby,
+    .footer_color section,
+    .footer_color summary,
+    .footer_color time,
+    .footer_color mark,
+    .footer_color audio,
+    .footer_color video,
+    #top .footer_color .pullquote_boxed,
+    .responsive #top .footer_color .avia-testimonial,
+    .responsive #top.avia-blank #main .footer_color.container_wrap:first-child,
+    #top .footer_color.fullsize .template-blog .post_delimiter,
+    .footer_color .related_posts.av-related-style-full a {
+        border-color: #4a4a4a;
+    }
+
+    .footer_color .rounded-container,
+    #top .footer_color .pagination a:hover,
+    .footer_color .small-preview,
+    .footer_color .fallback-post-type-icon {
+        background: #7a736b;
+        color: #000000;
+    }
+
+    .footer_color .av-default-color,
+    #top .footer_color .av-force-default-color,
+    .footer_color .av-catalogue-item,
+    .footer_color .wp-playlist-item .wp-playlist-caption,
+    .footer_color .wp-playlist {
+        color: #7b7368;
+    }
+
+    .footer_color,
+    .footer_color .site-background,
+    .footer_color .first-quote,
+    .footer_color .related_image_wrap,
+    .footer_color .gravatar img .footer_color .hr_content,
+    .footer_color .news-thumb,
+    .footer_color .post-format-icon,
+    .footer_color .ajax_controlls a,
+    .footer_color .tweet-text.avatar_no,
+    .footer_color .toggler,
+    .footer_color .toggler.activeTitle:hover,
+    .footer_color #js_sort_items,
+    .footer_color.inner-entry,
+    .footer_color .grid-entry-title,
+    .footer_color .related-format-icon,
+    .grid-entry .footer_color .avia-arrow,
+    .footer_color .avia-gallery-big,
+    .footer_color .avia-gallery-big,
+    .footer_color .avia-gallery img,
+    .footer_color .grid-content,
+    .footer_color .av-share-box ul,
+    #top .footer_color .av-related-style-full .related-format-icon,
+    .footer_color .related_posts.av-related-style-full a:hover,
+    .footer_color.avia-fullwidth-portfolio .pagination .current,
+    .footer_color.avia-fullwidth-portfolio .pagination a,
+    .footer_color .av-hotspot-fallback-tooltip-inner,
+    .footer_color .av-hotspot-fallback-tooltip-count {
+        background-color: #000000;
+        color: #7b7368;
+    }
+
+    .footer_color .heading-color,
+    .footer_color a.iconbox_icon:hover,
+    .footer_color h1,
+    .footer_color h2,
+    .footer_color h3,
+    .footer_color h4,
+    .footer_color h5,
+    .footer_color h6,
+    .footer_color .sidebar .current_page_item>a,
+    .footer_color .sidebar .current-menu-item>a,
+    .footer_color .pagination .current,
+    .footer_color .pagination a:hover,
+    .footer_color strong.avia-testimonial-name,
+    .footer_color .heading,
+    .footer_color .toggle_content strong,
+    .footer_color .toggle_content strong a,
+    .footer_color .tab_content strong,
+    .footer_color .tab_content strong a,
+    .footer_color .asc_count,
+    .footer_color .avia-testimonial-content strong,
+    .footer_color div .news-headline,
+    #top .footer_color .av-related-style-full .av-related-title,
+    .footer_color .av-default-style .av-countdown-cell-inner .av-countdown-time,
+    .footer_color .wp-playlist-item-meta.wp-playlist-item-title,
+    #top .footer_color .av-no-image-slider h2 a,
+    .footer_color .av-small-bar .avia-progress-bar .progressbar-title-wrap {
+        color: #7a736b;
+    }
+
+    .footer_color .meta-color,
+    .footer_color .sidebar,
+    .footer_color .sidebar a,
+    .footer_color .minor-meta,
+    .footer_color .minor-meta a,
+    .footer_color .text-sep,
+    .footer_color blockquote,
+    .footer_color .post_nav a,
+    .footer_color .comment-text,
+    .footer_color .side-container-inner,
+    .footer_color .news-time,
+    .footer_color .pagination a,
+    .footer_color .pagination span,
+    .footer_color .tweet-text.avatar_no .tweet-time,
+    #top .footer_color .extra-mini-title,
+    .footer_color .team-member-job-title,
+    .footer_color .team-social a,
+    .footer_color #js_sort_items a,
+    .grid-entry-excerpt,
+    .footer_color .avia-testimonial-subtitle,
+    .footer_color .commentmetadata a,
+    .footer_color .social_bookmarks a,
+    .footer_color .meta-heading>*,
+    .footer_color .slide-meta,
+    .footer_color .slide-meta a,
+    .footer_color .taglist,
+    .footer_color .taglist a,
+    .footer_color .phone-info,
+    .footer_color .phone-info a,
+    .footer_color .av-sort-by-term a,
+    .footer_color .av-magazine-time,
+    .footer_color .av-magazine .av-magazine-entry-icon,
+    .footer_color .av-catalogue-content,
+    .footer_color .wp-playlist-item-length,
+    .html_modern-blog #top div .footer_color .blog-categories a,
+    .html_modern-blog #top div .footer_color .blog-categories a:hover {
+        color: #7a736b;
+    }
+
+    .footer_color .special-heading-inner-border {
+        border-color: #7b7368;
+    }
+
+    .footer_color .meta-heading .special-heading-inner-border {
+        border-color: #7a736b;
+    }
+
+    .footer_color a,
+    .footer_color .widget_first,
+    .footer_color strong,
+    .footer_color b,
+    .footer_color b a,
+    .footer_color strong a,
+    .footer_color #js_sort_items a:hover,
+    .footer_color #js_sort_items a.active_sort,
+    .footer_color .av-sort-by-term a.active_sort,
+    .footer_color .special_amp,
+    .footer_color .taglist a.activeFilter,
+    .footer_color #commentform .required,
+    #top .footer_color .av-no-color.av-icon-style-border a.av-icon-char,
+    .html_elegant-blog #top .footer_color .blog-categories a,
+    .html_elegant-blog #top .footer_color .blog-categories a:hover {
+        color: #dedede;
+    }
+
+    .footer_color a:hover,
+    .footer_color h1 a:hover,
+    .footer_color h2 a:hover,
+    .footer_color h3 a:hover,
+    .footer_color h4 a:hover,
+    .footer_color h5 a:hover,
+    .footer_color h6 a:hover,
+    .footer_color .template-search a.news-content:hover,
+    .footer_color .wp-playlist-item .wp-playlist-caption:hover {
+        color: #dedede;
+    }
+
+    .footer_color .primary-background,
+    .footer_color .primary-background a,
+    div .footer_color .button,
+    .footer_color #submit,
+    .footer_color input[type='submit'],
+    .footer_color .small-preview:hover,
+    .footer_color .avia-menu-fx,
+    .footer_color .avia-menu-fx .avia-arrow,
+    .footer_color.iconbox_top .iconbox_icon,
+    .footer_color .iconbox_top a.iconbox_icon:hover,
+    .footer_color .avia-data-table th.avia-highlight-col,
+    .footer_color .avia-color-theme-color,
+    .footer_color .avia-color-theme-color:hover,
+    .footer_color .image-overlay .image-overlay-inside:before,
+    .footer_color .comment-count,
+    .footer_color .av_dropcap2,
+    .footer_color .av-colored-style .av-countdown-cell-inner,
+    .responsive #top .footer_color .av-open-submenu.av-subnav-menu>li>a:hover,
+    #top .footer_color .av-open-submenu.av-subnav-menu li>ul a:hover {
+        background-color: #dedede;
+        color: #ffffff;
+        border-color: #bcbcbc;
+    }
+
+    /* From avia-snippet-widget.css */
+
+    .widget_nav_menu a {
+        display: block;
+        padding: 4px 0 5px 0;
+        text-decoration: none;
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+    }
+
+    /* From main.css */
+
+    #footer {
+        text-align: left;
+        border-top-width: 0
+    }
+
+    #footer ul li {
+        display: inline-block;
+        width: 49%;
+        margin-bottom: 12px
+    }
+
+    #footer a {
+        font-size: 14px;
+        display: inline-block;
+        font-family: rotis !important;
+        text-transform: none
+    }
+
+    #footer a:after {
+        content: "";
+        background: #fff;
+        height: 1px;
+        width: 0;
+        display: block;
+        -webkit-transition: all 250ms ease-in-out;
+        -moz-transition: all 250ms ease-in-out;
+        -ms-transition: all 250ms ease-in-out;
+        -o-transition: all 250ms ease-in-out;
+        transition: all 250ms ease-in-out
+    }
+
+    #footer a:hover:after {
+        width: 100%
+    }
+
+    #menu-footer-bottom a {
+        color: #b08f44;
+        width: auto
+    }
+
+    #menu-footer-bottom a:after {
+        background: #b08f44
+    }
+
+    #menu-footer-bottom a:hover:after {
+        background: #b08f44;
+        width: 100%
+    }
+
+    .brand-footer {
+        display: none !important
+    }
+
+    @media only screen and (min-width: 992px) {
+        #footer .widget {
+            margin: 0
+        }
+
+        #footer {
+            text-align: center;
+        }
+
+        #footer ul {
+            margin: 20px 0 !important
+        }
+
+        #footer ul li {
+            display: inline-block;
+            width: auto;
+            margin-bottom: 0;
+            vertical-align: middle;
+            padding-left: 15px;
+            padding-right: 15px
+        }
+
+        #footer ul li a {
+            -webkit-transition: all 250ms ease-in-out;
+            -moz-transition: all 250ms ease-in-out;
+            -ms-transition: all 250ms ease-in-out;
+            -o-transition: all 250ms ease-in-out;
+            transition: all 250ms ease-in-out
+        }
+
+        #footer ul li a:hover {
+            opacity: .6
+        }
+
+        .brand-footer {
+            display: inline-block !important;
+            padding-top: 0;
+            padding-bottom: 15px
+        }
+
+        .brand-footer a {
+            display: block !important;
+            width: 22px !important;
+            height: 21px !important;
+            background: url(https://assets-2019.hakkasan.com/wp-content/uploads/2019/02/14172555/brand.png) no-repeat center center !important;
+            background-size: cover !important;
+            margin-left: auto;
+            margin-right: auto
+        }
+    }
+</style>
