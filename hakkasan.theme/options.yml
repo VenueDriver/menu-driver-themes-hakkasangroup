@@ -31,3 +31,6 @@ hakkasan-bodrum:
 hakkasan-riyadh:
   :location: hakkasan-riyadh
   :theme: hakkasan
+hakkasan-istanbul:
+  :location: hakkasan-istanbul
+  :theme: hakkasan
