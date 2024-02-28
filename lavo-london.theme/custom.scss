@@ -1,0 +1,93 @@
+/* Ovewrride this file in any theme to add custom styles. */
+.md-svg-leaf {
+  fill: $brand-secondary-color;
+  height: $base-line-height;
+  width: 1em;
+  }
+
+.md-svg-twoleaf {
+  fill: $brand-secondary-color;
+  height: $base-line-height;
+  width: 1em;
+}
+
+.md-svg-fern {
+  fill: $brand-secondary-color;
+  height: $base-line-height;
+  width: 1em;
+}
+
+.md-svg-hk {
+  fill: $brand-secondary-color;
+  height: $base-line-height;
+  width: 1.4em;
+}
+
+.menu-driver { 
+  .menu { 
+    border-width: 0;
+    padding-top: 0;
+  }
+}
+
+.menu-driver nav ul li a {
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.menu-driver nav ul li a.current, .menu-driver nav ul li a.current:visited{
+  opacity: 0.9;
+}
+
+.addition {
+  *{
+    font-size: 0.7rem;
+    opacity: 0.6;
+  }
+}
+
+body .menu-driver .menu .section .item {
+
+  .about{
+  flex: 1 80%;
+
+    .description{
+      font-weight: 200;
+    }
+  }
+
+  .choices .choice .name{
+    font-family: 'Playfair Display', sans-serif;
+  }
+
+}
+
+.menu-driver .menu .section>.items>.item>.about>.description{
+  font-weight: 200;
+}
+
+.menu-driver .menu .section .additions .addition .name, .menu-driver .category .section .additions .addition .name{
+  font-size: 0.7rem;
+  flex: none;
+}
+
+.menu-driver .menu .section>.meta>.name, .menu-driver .category .section>.meta>.name {
+  text-decoration: underline;
+}
+
+.menu-driver .menu .sections .section {
+  padding: 1.35rem 0;
+  border-top: 0.05rem solid $border-color;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-driver .menu-content .menu a.anchor {
+      top: -1rem;
+  }
+}
